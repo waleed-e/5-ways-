@@ -1,0 +1,65 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-div {
+    width: 300px; /* عرض محدد */
+    height: 200px; /* طول محدد */
+    background-color: #d30c0c;
+    border: 2px solid #dd0d0d;
+    text-align: center;
+    line-height: 200px; /* توسيط النص داخل ال div */
+    font-size: 1.5em;
+}
+
+/* طرق مختلفة لتوسيط ال div في وسط الصفحة */
+
+/* طريقة 1: استخدام flexbox للتوسيط */
+.centered-div.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* طريقة 2: استخدام التحويلات والمواقع النسبية */
+.centered-div.transform {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* طريقة 3: استخدام grid للتوسيط */
+.container.grid {
+    display: grid;
+}
+
+.centered-div.grid {
+    justify-self: center;
+    align-self: center;
+}
+
+/* طريقة 4: استخدام القيم المركزية لل margin */
+.centered-div.margin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* نصف الطول */
+    margin-left: -150px; /* نصف العرض */
+}
+
+/* طريقة 5: استخدام توسيط النص داخل ال div */
+.centered-div.text-center {
+    text-align: center;
+}
